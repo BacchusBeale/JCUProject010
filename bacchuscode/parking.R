@@ -16,7 +16,6 @@ cardata = filter(vehicles, vehicles$classes=="car")
 carlength = cardata$bbox_xmax - cardata$bbox_xmin
 summary(carlength)
 caravglength = mean(carlength)
-
 curbdata = filter(vehicles, vehicles$zone_name=="CURBPARKING")
 # find curb length
 curblength = max(curbdata$bbox_xmax) - min(curbdata$bbox_xmin)
