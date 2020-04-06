@@ -1,4 +1,4 @@
-file <-"C:/AAA/data/CITY OF SACREMENTO DATA/CSV/Chunk1-3-vehicles/chunk2-vehicles.csv"
+file <-"C:/AAA/data/CITY OF SACREMENTO DATA/CSV/Chunk1-3-vehicles/chunk4-vehicles.csv"
 vehicles <- read.csv(file, header = T, sep = ",")
 
 summary(vehicles)
@@ -110,15 +110,15 @@ library(ggplot2)
 library(gridExtra)
 colours <- c("red", "green", "blue")
 
-jpeg(filename = "walkway.jpg", width = 480, height = 480)
+jpeg(filename = "walkway4.jpg", width = 480, height = 480)
 p1 <- barplot(t(as.matrix(walkwayTable)), main = "Walkway",
               xlab = "vehicle",
               ylab = "vehicle count",
               col = "cyan",
-              horiz = TRUE)
+              horiz = F)
 dev.off()
 
-jpeg(filename = "curb.jpg", width = 480, height = 480)
+jpeg(filename = "curb4.jpg", width = 480, height = 480)
 p2 <- barplot(t(as.matrix(curbTable)), main = "curb",
               xlab = "vehicle",
               ylab = "vehicle count",
@@ -126,7 +126,7 @@ p2 <- barplot(t(as.matrix(curbTable)), main = "curb",
               horiz = F)
 
 dev.off()
-jpeg(filename = "bikelane.jpg", width = 480, height = 480)
+jpeg(filename = "bikelane4.jpg", width = 480, height = 480)
 p3 <- barplot(t(as.matrix(bikeTable)), main = "bike lane",
               xlab = "vehicle",
               ylab = "vehicle count",
@@ -134,7 +134,7 @@ p3 <- barplot(t(as.matrix(bikeTable)), main = "bike lane",
               horiz = F)
 
 dev.off()
-jpeg(filename = "road1.jpg", width = 480, height = 480)
+jpeg(filename = "road14.jpg", width = 480, height = 480)
 p4 <- barplot(t(as.matrix(road1Table)), main = "road lane 1",
               xlab = "vehicle",
               ylab = "vehicle count",
@@ -142,7 +142,7 @@ p4 <- barplot(t(as.matrix(road1Table)), main = "road lane 1",
               horiz = F)
 
 dev.off()
-jpeg(filename = "road2.jpg", width = 480, height = 480)
+jpeg(filename = "road24.jpg", width = 480, height = 480)
 p5 <- barplot(t(as.matrix(road2Table)), main = "road lane 2",
               xlab = "vehicle",
               ylab = "vehicle count",
